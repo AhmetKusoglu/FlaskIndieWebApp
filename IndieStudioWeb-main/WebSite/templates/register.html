@@ -1,0 +1,65 @@
+{%extends "layout.html"%} {%block title%}
+<title>Register</title> {%endblock title%} {%block content%}
+
+<form method="POST">
+
+    <div class=container>
+        <div class="register-form">
+            {{form.hidden_tag()}} {{form.username.label(class="label")}}
+            <br> {{form.username(class="input-field")}}
+            <br> {{form.email_address.label(class="label")}}
+            <br> {{form.email_address(class="input-field")}}
+            <br>{{form.password1.label(class="label")}}
+            <br>{{form.password1(class="input-field")}}
+            <br>{{form.password2.label(class="label")}}
+            <br>{{form.password2(class="input-field")}}
+            <br>
+            <br>
+            <button type="submit">Register</button>
+        </div>
+
+    </div>
+
+</form>
+
+<style>
+    .container {
+        display: block;
+        width: 71%;
+        margin: auto;
+    }
+    
+    .register-form {
+        background-color: #E5E5E5;
+        padding: 10rem;
+        text-align: center;
+        display: inline-block;
+        margin-top: 0rem;
+        border-radius: 10px;
+    }
+    
+    .label {
+        color: #544F5E;
+        font-size: 1.3rem;
+    }
+    
+    .input-field {
+        border: none;
+        background-color: #F2F2F2;
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+    
+    button {
+        background-color: #AAC992;
+        border: none;
+        color: white;
+        font-size: 1.3rem;
+        text-align: center;
+        padding-right: 6rem;
+        padding-left: 6rem;
+        border-radius: 4px;
+    }
+</style>
+
+{%endblock content%}
